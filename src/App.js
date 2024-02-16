@@ -1,8 +1,8 @@
-import Messages from './components/Messages/Messages';
-import Header from './components/Header/Header';
+
 import './App.css';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import Login from './components/Login/Login'
+import Login from './components/Login/Login';
+import MessagePage from './pages/messagePage';
 
 function App() {
 
@@ -10,10 +10,10 @@ function App() {
   
   return (
     <BrowserRouter>
-      <Header/>
-      <Login/>
+    
       <Routes>
-        <Route path='/' element={<Messages/>}></Route>
+         <Route path='/Login' element={<Login/>}></Route>
+        <Route path='/messagePage' element={<MessagePage/>}></Route>
       </Routes>
     </BrowserRouter>
     
