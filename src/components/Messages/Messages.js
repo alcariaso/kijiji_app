@@ -1,6 +1,6 @@
 import react from 'react';
 import '../Messages/Messages.scss';
-import sentIcon from "../../assets/images/icons8-send-48.png"
+import sendIcon from '../../assets/images/icons8-send-48.png';
 
 export const Messages = ()  => {
 
@@ -11,18 +11,18 @@ export const Messages = ()  => {
 
                 <div className='messageBox__main'>
                     <div className='message--sent'>
-                        <p className='message__text'>Sample Text</p>
+                        <p className='message__text--sent'>Hi its available</p>
                         <p className='message__notif'>Read</p>
                     </div>
 
                     <div className='message--recieved'>
-                        <p className='message__text'>Sample Text</p>
+                        <p className='message__text'>great! can I lower?</p>
                         <p className='message__notif'>Read</p>
 
                     </div>
 
                     <div className='message--sent'>
-                        <p className='message__text'>Sample Text</p>
+                        <p className='message__text--sent'>no</p>
                         <p className='message__notif'>Read</p>
 
                     </div>
@@ -30,12 +30,12 @@ export const Messages = ()  => {
                 </div>
 
                 <div className='messageBox__AddOn'>
-                    <button className='button' type='submit'></button>
+                    <button className='button' type='submit'>Delivery </button>
                 </div>
 
                 <div className='messageBox__textBox'>
-                    <input className='input'></input>
-                    <img className='img' src={sentIcon}></img>
+                    <input className='input' placeholder='Type a message...'></input>
+                    <img className='img' src={sendIcon}></img>
                 </div>
 
             </div>

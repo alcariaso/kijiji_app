@@ -19,14 +19,26 @@
                     margin: 0%;
                     font-size: 20px;
                     color: #ffff;
-                    font-weight: 600;
+                    font-weight: 400;
+
+                    &--sent {
+                        background-color:  #e1e1e2;
+                        padding: 1rem;
+                        border-radius:15px;
+                        display: inline-block;
+                        margin: 0%;
+                        font-size: 20px;
+                        color: black;
+                        font-weight: 400; 
+                    }
 
                 }
 
                 &__notif {
-                    font-weight: 600;
+                    font-weight: 500;
                     padding: .5rem;
                     margin: 0%;
+                    color: #88888a;
                 }
 
                 &--sent{
@@ -47,15 +59,20 @@
         }
 
         &__AddOn {
+            padding: 1rem;
           
             .button {
                 height: 40px;
                 width: 120px;
-                border: 1px solid black;
+                border: 1px solid #BDC5D5;
                 border-radius: 20px;
+                font-size: 15px;
+                font-weight: 500;
                 &:hover {
                     background-color: #39359A;
                     border-style: none;
+                    color: #ffff;
+                    font-weight: 500;
                 }
             }
 
@@ -64,12 +81,17 @@
         &__textBox {
 
             height: 80px;
-            border: 1px solid black;
+            border: 1px solid #BDC5D5;
+            display: flex;
+            align-items: center;
 
             .input {
-                height: 60px;
                 width: 90%;
                 border-style: none;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 1rem;
+                
 
                 &:focus {
                     outline: none;
@@ -79,7 +101,8 @@
             }
 
             .img {
-
+                height: 30px;
+                width: auto;
             }
         }
     }
