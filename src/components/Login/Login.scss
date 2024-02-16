@@ -1,0 +1,170 @@
+*,body{
+    color: #6f727f;
+    font-family: Larsseit, Arial, sans-serif;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+   
+    padding: 2rem;
+    background-color: #F7F7F9;
+   
+  }
+  
+  .login-form__title {
+    margin-bottom: 1rem;
+    color: #3e4153;
+   
+  }
+  
+  .login-form__description {
+    margin-bottom: 2rem;
+   
+    color: #666;
+  }
+  
+  .login-form__fields {
+    margin-bottom: 2rem;
+  }
+  
+  .login-form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-form__input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .login-form__link {
+    color: #2d844c;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .login-form__link:hover {
+    text-decoration: underline;
+  }
+  
+  .login-form__button {
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    background-color: #373373;;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form__button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-form__footer {
+    text-align: center;
+  }
+  
+  .login-form__signup-text {
+    margin-top: 2rem;
+  }
+  
+  .login-form__language {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .login-form__language-flag {
+    font-size: 1.5rem;
+  }
+  
+  .login-form__language-selector {
+    border: none;
+    // border-radius: 4px;
+    // padding: 0.5rem;
+    background-color: #F7F7F9;
+  }
+
+
+.display-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .feature-list__title {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+    /* Add any required font styling for the logo here */
+  }
+  .feature-list__card{
+    margin: 1rem 2rem;
+    max-width: 400px;
+    min-width: 300px;
+    text-align: left;
+    padding: 50px;
+
+  }
+
+  
+  .feature-list__subtitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-list__items {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 0;
+    max-width: 320px;
+    flex-direction: column;
+  }
+  
+  .feature-list__item {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 0;
+    max-width: 320px;
+   
+  }
+  
+  .feature-list__icon {
+    margin-right: 0.5rem;
+    max-width: 24px;
+    max-height: 24px;
+  
+  }
+  
+  .logo{
+    height: 3rem;
+  }
+  .google-authernicate{
+    text-align: center;
+  }
