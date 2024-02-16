@@ -32,10 +32,10 @@ export default function Login(){
   
   
     if (window.google) {
-      console.log("test1")
+    
       loadGoogleAPI();
     } else {
-      console.log("test1")
+     
       const script = document.createElement('script');
       script.src = 'https://accounts.google.com/gsi/client';
       script.onload = loadGoogleAPI;
