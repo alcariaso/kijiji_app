@@ -31,7 +31,6 @@ function App() {
   <Logout/>
       <Routes>
         <Route path='/' element={<Messages/>}></Route>
-       
       </Routes>
     </BrowserRouter>
     
