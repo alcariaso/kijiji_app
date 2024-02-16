@@ -2,7 +2,6 @@ import Messages from './components/Messages/Messages';
 import Header from './components/Header/Header';
 import './App.css';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { GoogleOAuthProvider } from '@react-oauth/google';
 import Login from './components/Login/Login'
 
 function App() {
