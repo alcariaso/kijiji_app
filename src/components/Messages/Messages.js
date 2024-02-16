@@ -9,7 +9,6 @@ export const Messages = ()  => {
         <PageLayout>
         <main className='messages'>
             
-
             <div className='messageBox'>
 
                 <div className='messageBox__main'>

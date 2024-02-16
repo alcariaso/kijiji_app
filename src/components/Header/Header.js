@@ -5,6 +5,7 @@ import heart from '../../assets/images/heart.png';
 import notification from '../../assets/images/notification.png';
 import location from '../../assets/images/location.png';
 import chat from '../../assets/images/chat.png';
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
                 <ul className="nav__list">
                     <li className="items"><img className="img" src={heart}></img></li>
                     <li className="items"><img  className="img" src={notification}></img></li>
-                    <li className="items" ><img className="img" src={chat}></img></li>
+                    <Link to="/Messages"className="items"><li  ><img className="img" src={chat}></img></li></Link>
                     <li className="items"><div className="profile">A</div></li>
                     <li className="items"><div className="ad">Post Ad</div></li>
                 </ul>
