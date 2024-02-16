@@ -31,8 +31,7 @@ export const Messages = ()  => {
                 <div className='sellerInfo__description'>
                     <p className='text'>Ikea NotStanding Stand Chairs</p>
                     <p className='text--price'>$40.00</p>
-                </div>
-                
+                </div>             
 
             </div>
             
@@ -75,6 +74,8 @@ export const Messages = ()  => {
 
                 <div className='messageBox__AddOn'>
                     <button   className='button' type='submit'>Delivery </button>
+                    <button   className='button' type='submit'>Pick - Up </button>
+                    <button   className='button' type='submit'>Meet - Up </button>
                 </div>
 
                 <div className='messageBox__textBox'>
