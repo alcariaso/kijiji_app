@@ -36,12 +36,12 @@ export const Messages = ()  => {
 
     const togglePopup = (event) => {
       event.preventDefault();
-      setIsOpen((prevState) => !prevState); // Toggling isOpen state
+      setIsOpen((prevState) => !prevState); 
     };
   
     const handleButtonClick = (index) => {
       console.log("Button " + (index + 1) + " clicked");
-      // Add your logic here for button click actions
+  
     };
 
 

@@ -6,6 +6,7 @@ import logo from '../../assets/images/kijiji-logo.svg';
 import heart from '../../assets/images/heart.png';
 import chat from '../../assets/images/chat.png';
 import post from '../../assets/images/savedIcon.svg';
+import { Link } from 'react-router-dom';
 
 
 export default function Login(){
@@ -63,7 +64,7 @@ return (
         <input type="password" id="password" className="login-form__input" />
         <a href="#forgot" className="login-form__link">Forgot Password?</a>
         
-        <button type="submit" className="login-form__button">Sign in</button>
+        <Link to="/messagePage"><button  type="submit" className="login-form__button">Sign in</button></Link>
       </form>
     <div className='google-authenicate'>
       <h3>Login with Gmail</h3>
