@@ -1,10 +1,7 @@
 import Messages from './components/Messages/Messages';
 import Header from './components/Header/Header';
 import './App.css';
-
-
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-
 import Login from './components/Login/Login'
 import Logout from './components/Login/Logout'
 import { useEffect } from 'react';
@@ -25,26 +22,20 @@ function App() {
     };
 
     gapi.load('client:auth2', start);
-
+  });
   
   return (
     <BrowserRouter>
       <Header/>
   <Login/>
   <Logout/>
-      {/* <Messages></Messages> */}
       <Routes>
         <Route path='/' element={<Messages/>}></Route>
        
       </Routes>
-
     </BrowserRouter>
     
-  
-
-    
- 
   );
-}
+  }
 
 export default App;
