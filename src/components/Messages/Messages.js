@@ -9,6 +9,8 @@ export const Messages = ()  => {
 
     const [message, setMessage] = useState ([]);
     const [inputRes, setInputRes] = useState("");
+    const [showOptions, setShowOptions] = useState(false);
+    
 
     function WriteMessage(e) {
         setInputRes(e.target.value)
@@ -17,10 +19,21 @@ export const Messages = ()  => {
 
     function addMessage() {
         if (inputRes.trim() !== "") { 
-            setMessage((oldTask) => [...oldTask, inputRes]);
+            setMessage((oldMes) => [...oldMes, inputRes]);
             setInputRes(""); 
         }
     }
+
+    function showDeliveryOptions() {
+        setShowOptions(true);
+    }
+
+    function showDeliveryPickUp() {
+        setShowOptions(true);
+    }
+
+
+
 
 
     return (  
@@ -31,6 +44,11 @@ export const Messages = ()  => {
                 <div className='sellerInfo__description'>
                     <p className='text'>Ikea NotStanding Stand Chairs</p>
                     <p className='text--price'>$40.00</p>
+                    <div className='deliveryOption'>
+                        <p className='options'>Pick-Up</p>
+                        <p className='options'>Meet-Up</p>
+                        <p className='options'>Delivery</p>
+                    </div>
                 </div>             
 
             </div>
@@ -55,6 +73,22 @@ export const Messages = ()  => {
 
                     </div>
 
+                    <div className='message--delivery'>
+                    {showOptions && (
+                    
+                        <div className='textContainer'>
+                                <p className='deliveryText'>Customer Selcted Meet-up</p>
+                                <input className='locationButton' placeholder='Enter Meet-Up Address'></input>
+                                <button className='locationButton'>send</button>  
+                        </div>
+                        
+                    
+                    )}
+
+                    {/* {showOptions && <button className='locationButton'>Enter Meet-Up Address</button>} */}
+                    </div>
+                    
+
                     <div className='response'>
                     {
                         message.map((indMessage, index) => (
@@ -73,9 +107,10 @@ export const Messages = ()  => {
                 </div>
 
                 <div className='messageBox__AddOn'>
-                    <button   className='button' type='submit'>Delivery </button>
-                    <button   className='button' type='submit'>Pick - Up </button>
-                    <button   className='button' type='submit'>Meet - Up </button>
+                    <button onClick=""  className='button' type='submit'>Delivery </button>
+                    <button onClick={showDeliveryPickUp}  className='button' type='submit'>Pick - Up </button>
+                    <button onClick={showDeliveryOptions}  className='button' type='submit'>Meet - Up </button>
+                    
                 </div>
 
                 <div className='messageBox__textBox'>
