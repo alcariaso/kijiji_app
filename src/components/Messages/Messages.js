@@ -3,8 +3,25 @@ import '../Messages/Messages.scss';
 import sendIcon from '../../assets/images/icons8-send-48.png';
 import ikea from '../../assets/images/$ikea.jpg'
 import PageLayout from '../PageLayout/PageLayout';
+import { useState } from 'react';
 
 export const Messages = ()  => {
+
+    const [message, setMessage] = useState ([]);
+    const [inputRes, setInputRes] = useState("");
+
+    function WriteMessage(e) {
+        setInputRes(e.target.value)
+        console.log(inputRes)
+    }
+
+    function addMessage() {
+        if (inputRes.trim() !== "") { 
+            setMessage((oldTask) => [...oldTask, inputRes]);
+            setInputRes(""); 
+        }
+    }
+
 
     return (  
         <PageLayout>
@@ -19,7 +36,7 @@ export const Messages = ()  => {
 
             </div>
             
-            <form className='messageBox'>
+            <div className='messageBox'>
 
                 <div className='messageBox__main'>
                     <div className='message--sent'>
@@ -39,21 +56,37 @@ export const Messages = ()  => {
 
                     </div>
 
+                    <div className='response'>
+                    {
+                        message.map((indMessage, index) => (
+                                <div className="singleMessage" key={indMessage.index}>
+                                    <p className="singleMessage__text">{indMessage}</p>
+                                    <p className='notif'>Read</p>
+                                </div>
+                    
+                            )
+                        )
+                    }
+                
+
+                    </div> 
+
                 </div>
 
                 <div className='messageBox__AddOn'>
-                    <button className='button' type='submit'>Delivery </button>
+                    <button   className='button' type='submit'>Delivery </button>
                 </div>
 
                 <div className='messageBox__textBox'>
-                    <input className='input' placeholder='Type a message...'></input>
-                    <button className='buttonOnlick' onClick=""><img className='img' src={sendIcon}></img></button>
+                    <input onChange={WriteMessage} type='text' className='input' placeholder='Type a message...'></input>
+                    <button onClick={addMessage} className='buttonOnlick'><img className='img' src={sendIcon}></img></button>
                     
                 </div>
 
-            </form>
-            
+          
 
+            </div>
+            
         </main>
         </PageLayout> 
     )
