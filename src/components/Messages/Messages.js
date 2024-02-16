@@ -1,9 +1,9 @@
-import react from 'react';
-import '../Messages/Messages.scss';
-import sendIcon from '../../assets/images/icons8-send-48.png';
-import ikea from '../../assets/images/$ikea.jpg'
-import PageLayout from '../PageLayout/PageLayout';
-import { useState } from 'react';
+import React, { useState } from "react";
+import "../Messages/Messages.scss";
+import sendIcon from "../../assets/images/icons8-send-48.png";
+import ikea from "../../assets/images/$ikea.jpg";
+import PageLayout from "../PageLayout/PageLayout";
+import DeliveryModal from "../DeliveryModal/DeliveryModal";
 
 export const Messages = ()  => {
 
@@ -31,6 +31,18 @@ export const Messages = ()  => {
     function showDeliveryPickUp() {
         setShowOptions(true);
     }
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const togglePopup = (event) => {
+      event.preventDefault();
+      setIsOpen((prevState) => !prevState); // Toggling isOpen state
+    };
+  
+    const handleButtonClick = (index) => {
+      console.log("Button " + (index + 1) + " clicked");
+      // Add your logic here for button click actions
+    };
 
 
 
@@ -85,7 +97,7 @@ export const Messages = ()  => {
                     
                     )}
 
-                    {/* {showOptions && <button className='locationButton'>Enter Meet-Up Address</button>} */}
+
                     </div>
                     
 
@@ -107,7 +119,21 @@ export const Messages = ()  => {
                 </div>
 
                 <div className='messageBox__AddOn'>
-                    <button onClick=""  className='button' type='submit'>Delivery </button>
+                <button className="button" onClick={togglePopup}>
+              Delivery
+            </button>
+            <DeliveryModal
+              isOpen={isOpen}
+              onClose={togglePopup}
+              onButtonClick={handleButtonClick}
+              buttonTexts={["Uber", "U - Haul", "Go Share"]}
+              buttonLinks={[
+                "https://www.uber.com/ca/en/",
+                "https://www.uhaul.com/",
+                "https://goshare.co/",
+              ]}
+              cancelText="Cancel"
+            ></DeliveryModal>
                     <button onClick={showDeliveryPickUp}  className='button' type='submit'>Pick - Up </button>
                     <button onClick={showDeliveryOptions}  className='button' type='submit'>Meet - Up </button>
                     
