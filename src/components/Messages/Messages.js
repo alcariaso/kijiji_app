@@ -1,12 +1,15 @@
 import react from 'react';
 import '../Messages/Messages.scss';
 import sendIcon from '../../assets/images/icons8-send-48.png';
+import PageLayout from '../PageLayout/PageLayout';
 
 export const Messages = ()  => {
 
-    return (
+    return (  
+        <PageLayout>
         <main className='messages'>
-            {/* space for header */}
+            
+
             <div className='messageBox'>
 
                 <div className='messageBox__main'>
@@ -42,6 +45,7 @@ export const Messages = ()  => {
             
 
         </main>
+        </PageLayout> 
     )
 }
 
