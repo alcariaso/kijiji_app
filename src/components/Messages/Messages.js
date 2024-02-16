@@ -1,6 +1,7 @@
 import react from 'react';
 import '../Messages/Messages.scss';
 import sendIcon from '../../assets/images/icons8-send-48.png';
+import ikea from '../../assets/images/$ikea.jpg'
 import PageLayout from '../PageLayout/PageLayout';
 
 export const Messages = ()  => {
@@ -8,8 +9,17 @@ export const Messages = ()  => {
     return (  
         <PageLayout>
         <main className='messages'>
+            <div className='sellerInfo'>
+                <img className='sellerInfo__item' src={ikea}></img>
+                <div className='sellerInfo__description'>
+                    <p className='text'>Ikea NotStanding Stand Chairs</p>
+                    <p className='text--price'>$40.00</p>
+                </div>
+                
+
+            </div>
             
-            <div className='messageBox'>
+            <form className='messageBox'>
 
                 <div className='messageBox__main'>
                     <div className='message--sent'>
@@ -37,10 +47,11 @@ export const Messages = ()  => {
 
                 <div className='messageBox__textBox'>
                     <input className='input' placeholder='Type a message...'></input>
-                    <img className='img' src={sendIcon}></img>
+                    <button className='buttonOnlick' onClick=""><img className='img' src={sendIcon}></img></button>
+                    
                 </div>
 
-            </div>
+            </form>
             
 
         </main>

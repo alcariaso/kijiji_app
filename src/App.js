@@ -8,9 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <Header/>
-      <Messages></Messages>
+      {/* <Messages></Messages> */}
       <Routes>
-        {/* <Route path='/Messages' element={<Messages/>}></Route> */}
+        <Route path='/' element={<Messages/>}></Route>
        
       </Routes>
 

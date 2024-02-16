@@ -27,7 +27,9 @@ const Header = () => {
                 <ul className="nav__list">
                     <li className="items"><img className="img" src={heart}></img></li>
                     <li className="items"><img  className="img" src={notification}></img></li>
-                    <Link to="/Messages"className="items"><li  ><img className="img" src={chat}></img></li></Link>
+                    <li className="items">
+                        <Link to="/"><img className="img" src={chat}></img></Link>
+                    </li>
                     <li className="items"><div className="profile">A</div></li>
                     <li className="items"><div className="ad">Post Ad</div></li>
                 </ul>

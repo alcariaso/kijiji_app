@@ -1,4 +1,29 @@
 .messages {
+
+    .sellerInfo {
+        display: flex;
+        padding: 1rem;
+
+        &__item {
+            height: 100px;
+            padding: 1rem;
+
+        }
+
+        &__description {
+           
+
+            .text {
+                font-weight: 500;
+
+                &--price {
+                    color: rgb(77, 187, 77);
+                    font-weight: 500;
+                }
+
+            }
+        }
+    }
    
 
     .messageBox {
@@ -98,6 +123,11 @@
                 }
                
                 
+            }
+
+            .buttonOnlick{
+                border-style: none;
+                background-color: white;
             }
 
             .img {
