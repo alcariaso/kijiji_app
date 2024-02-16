@@ -1,0 +1,86 @@
+.messages {
+   
+
+    .messageBox {
+        height:auto;
+        width: 100%;
+
+        &__main {
+            
+        
+            .message {
+                
+
+                &__text {
+                    background-color:  #39359A;
+                    padding: 1rem;
+                    border-radius:15px;
+                    display: inline-block;
+                    margin: 0%;
+                    font-size: 20px;
+                    color: #ffff;
+                    font-weight: 600;
+
+                }
+
+                &__notif {
+                    font-weight: 600;
+                    padding: .5rem;
+                    margin: 0%;
+                }
+
+                &--sent{
+                    padding: 1rem;
+                    
+                    
+                }
+
+                &--recieved {
+                    padding: 1rem;
+                    text-align: end;
+                   
+
+                }
+            }
+
+
+        }
+
+        &__AddOn {
+          
+            .button {
+                height: 40px;
+                width: 120px;
+                border: 1px solid black;
+                border-radius: 20px;
+                &:hover {
+                    background-color: #39359A;
+                    border-style: none;
+                }
+            }
+
+        }
+
+        &__textBox {
+
+            height: 80px;
+            border: 1px solid black;
+
+            .input {
+                height: 60px;
+                width: 90%;
+                border-style: none;
+
+                &:focus {
+                    outline: none;
+                }
+               
+                
+            }
+
+            .img {
+
+            }
+        }
+    }
+}
